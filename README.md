@@ -6,12 +6,12 @@ This project implements a possible solution to Elma's kata:
 
 ## Installing and starting the application
 
-##Prerequisites
+#### Prerequisites
 - **[GitHub](https://github.com/)**
 - **[Docker Compose](https://docs.docker.com/develop/)**
 - **[Laradock](https://laradock.io/)**
 
-##How to install
+#### How to install
 - 1.Clone the repository  
 ```bash
 git clone https://github.com/ITadeoI/kata_laradock.git
@@ -57,11 +57,3 @@ The migrate command creates the tables founded in blog/database/migrations and d
 * [Composer](https://getcomposer.org/doc/) - Dependency management
 * [Docker](https://docs.docker.com/) - OS-level virtualization (PaaS)
 * [Postman](https://www.getpostman.com/) - API Client for testing
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
