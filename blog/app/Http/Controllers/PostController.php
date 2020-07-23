@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PostResource;
+use App\Model\Author;
 use App\Model\Post;
 use Illuminate\Http\Request;
 
@@ -10,11 +12,12 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Author $author
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Author $author)
     {
-        //
+        return PostResource::collection($author->posts);
     }
 
     /**
