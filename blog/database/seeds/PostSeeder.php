@@ -18,12 +18,16 @@ class PostSeeder extends Seeder
             'content' => 'His audiam deserunt in, eum ubique voluptatibus te. In reque dicta usu. Ne rebum dissentiet eam, vim omnis deseruisse id. Ullum deleniti vituperata at quo, insolens complectitur te eos, ea pri dico munere propriae. Vel ferri facilis ut, qui paulo ridens praesent ad. Possim alterum qui cu. Accusamus consulatu ius te, cu decore soleat appareat usu'
         ]);
 
+        $post->save();
+
         $post = new App\Model\Post([
             'author_id' => 1,
             'title' => 'Me, Myself & I in Wonderlands!',
             'description' => 'Ea vix ceteros complectitur, vel cu nihil nullam.',
             'content' => 'In reque dicta usu. Ne rebum dissentiet eam, vim omnis deseruisse id. Ullum deleniti vituperata at quo, insolens complectitur te eos, ea pri dico munere propriae. Vel ferri facilis ut, qui paulo ridens praesent ad. Possim alterum qui cu. Accusamus consulatu ius te, cu decore soleat appareat usu'
         ]);
+
+        $post->save();
 
         $post = new App\Model\Post([
             'author_id' => 4,
