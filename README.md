@@ -30,7 +30,6 @@ docker ps
 ```
 You should see something like this:
 <p align="center"><img src="https://i.ibb.co/7g2M0gH/image.png" width="4000"></p>
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 - 5.Now, you can access to your browser an type http://localhost/ in order to see the Laravel welcome.
 
