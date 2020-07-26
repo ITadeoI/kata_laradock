@@ -6,12 +6,13 @@ This project implements a possible solution to Elma's kata:
 
 ## Installing and starting the application
 
-####Prerequisites
+Prerequisites
+
 - **[GitHub](https://github.com/)**
 - **[Docker Compose](https://docs.docker.com/develop/)**
 - **[Laradock](https://laradock.io/)**
 
-####How to install
+###How to install
 - 1.Clone the repository  
 ```bash
 git clone https://github.com/ITadeoI/kata_laradock.git
