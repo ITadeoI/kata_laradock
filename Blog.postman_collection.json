@@ -6,6 +6,88 @@
 	},
 	"item": [
 		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "getToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"grant_type\" : \"password\",\n    \"client_id\" : \"2\",\n    \"client_secret\" : \"DBhhuLj7EuQ2NdEyy8rQCtkZSbN5f8i4qvPRTFfL\",\n    \"username\" : \"alejandro.tadeo.romero@gmail.com\",\n    \"password\" : \"12345678\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/api/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Transfer-Encoding",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNjZmNGU1ZWQ1ZGUwNWQ4ZjRkODVjMmE3YjVjMTMwZWQ5NDk1NjgzMDJkOTNjYzE0MTFjNjIzMjBmNDFmOTFjYzVjZDY5MmUyZWI0MTc3MTAiLCJpYXQiOjE1OTU3NzAxNDIsIm5iZiI6MTU5NTc3MDE0MiwiZXhwIjoxNjI3MzA2MTQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.grjrcTmuN9AdbtoH-0DEdRWk4ZbiSQczd77hk6-95KVgYYSF8Re5PFU8fCb87r_ACMFt_u5ZHUB6dTyREB8NEbG3TGNzN_plnQQymPPX5R5AAdN4WhjHtXU65yrTMLWDqX0v1viKo5HgRruwXeTCq7b5PcHfLnCI-inUBjYbFQd8FobOEo_e9QskVlQ8Lx0Si2UUVce3-6ICf7yL_Pz5Sx6hoPLnB6s8XcsjE2T0KgyB5DHYbRDoMPHrnttFfQ13mGr4kflL7RNyntE_c-UQ5MxvuEugJEIchhyiUy6ir1aT3b3igwedCEHGDO1w9rdJeRSmQxYL1WFkHpI-n683MIkTN_CTwiZm0hwBUOfjzDcMwJBlwXE2i7qMp8OuK8IAAZg9pNfermRO6GGxCEamOnaVlWpBqbmzkKd1jVpj7w6FMIo3l3v53hCi1JpunLqNVOlahiZ8TLzgHjbcmHTQTJrxjDa6AB7GSbTdxMa5w9ZFXB0N_SpTmmL5tdzHwzr21KlV9JFglh-QfSjjyCH5o1AEeukxfuUSgQOMG7nd9nDlKQXEO_xWoYklHhfVK4tWfxxzfwCDt1oDPOVd48Gu8UwivgNJG2urrmTcTAmoGkfTd9H-3rJDyX8Kjvr_Q5zVervr75n6HQQw-3lNYMQQvNERnb9WwD5Ub3p3tLIk9HA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "getAuthors",
 			"request": {
 				"method": "GET",
@@ -60,6 +142,86 @@
 						"authors",
 						"4",
 						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setNewAuthor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNjZmNGU1ZWQ1ZGUwNWQ4ZjRkODVjMmE3YjVjMTMwZWQ5NDk1NjgzMDJkOTNjYzE0MTFjNjIzMjBmNDFmOTFjYzVjZDY5MmUyZWI0MTc3MTAiLCJpYXQiOjE1OTU3NzAxNDIsIm5iZiI6MTU5NTc3MDE0MiwiZXhwIjoxNjI3MzA2MTQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.grjrcTmuN9AdbtoH-0DEdRWk4ZbiSQczd77hk6-95KVgYYSF8Re5PFU8fCb87r_ACMFt_u5ZHUB6dTyREB8NEbG3TGNzN_plnQQymPPX5R5AAdN4WhjHtXU65yrTMLWDqX0v1viKo5HgRruwXeTCq7b5PcHfLnCI-inUBjYbFQd8FobOEo_e9QskVlQ8Lx0Si2UUVce3-6ICf7yL_Pz5Sx6hoPLnB6s8XcsjE2T0KgyB5DHYbRDoMPHrnttFfQ13mGr4kflL7RNyntE_c-UQ5MxvuEugJEIchhyiUy6ir1aT3b3igwedCEHGDO1w9rdJeRSmQxYL1WFkHpI-n683MIkTN_CTwiZm0hwBUOfjzDcMwJBlwXE2i7qMp8OuK8IAAZg9pNfermRO6GGxCEamOnaVlWpBqbmzkKd1jVpj7w6FMIo3l3v53hCi1JpunLqNVOlahiZ8TLzgHjbcmHTQTJrxjDa6AB7GSbTdxMa5w9ZFXB0N_SpTmmL5tdzHwzr21KlV9JFglh-QfSjjyCH5o1AEeukxfuUSgQOMG7nd9nDlKQXEO_xWoYklHhfVK4tWfxxzfwCDt1oDPOVd48Gu8UwivgNJG2urrmTcTAmoGkfTd9H-3rJDyX8Kjvr_Q5zVervr75n6HQQw-3lNYMQQvNERnb9WwD5Ub3p3tLIk9HA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Jack\",\n    \"surname\" : \"Skellington\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/authors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"authors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setUpdateAuthor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNjZmNGU1ZWQ1ZGUwNWQ4ZjRkODVjMmE3YjVjMTMwZWQ5NDk1NjgzMDJkOTNjYzE0MTFjNjIzMjBmNDFmOTFjYzVjZDY5MmUyZWI0MTc3MTAiLCJpYXQiOjE1OTU3NzAxNDIsIm5iZiI6MTU5NTc3MDE0MiwiZXhwIjoxNjI3MzA2MTQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.grjrcTmuN9AdbtoH-0DEdRWk4ZbiSQczd77hk6-95KVgYYSF8Re5PFU8fCb87r_ACMFt_u5ZHUB6dTyREB8NEbG3TGNzN_plnQQymPPX5R5AAdN4WhjHtXU65yrTMLWDqX0v1viKo5HgRruwXeTCq7b5PcHfLnCI-inUBjYbFQd8FobOEo_e9QskVlQ8Lx0Si2UUVce3-6ICf7yL_Pz5Sx6hoPLnB6s8XcsjE2T0KgyB5DHYbRDoMPHrnttFfQ13mGr4kflL7RNyntE_c-UQ5MxvuEugJEIchhyiUy6ir1aT3b3igwedCEHGDO1w9rdJeRSmQxYL1WFkHpI-n683MIkTN_CTwiZm0hwBUOfjzDcMwJBlwXE2i7qMp8OuK8IAAZg9pNfermRO6GGxCEamOnaVlWpBqbmzkKd1jVpj7w6FMIo3l3v53hCi1JpunLqNVOlahiZ8TLzgHjbcmHTQTJrxjDa6AB7GSbTdxMa5w9ZFXB0N_SpTmmL5tdzHwzr21KlV9JFglh-QfSjjyCH5o1AEeukxfuUSgQOMG7nd9nDlKQXEO_xWoYklHhfVK4tWfxxzfwCDt1oDPOVd48Gu8UwivgNJG2urrmTcTAmoGkfTd9H-3rJDyX8Kjvr_Q5zVervr75n6HQQw-3lNYMQQvNERnb9WwD5Ub3p3tLIk9HA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Jack\",\n    \"surname\" : \"Skellington\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/authors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"authors",
+						""
 					]
 				}
 			},
